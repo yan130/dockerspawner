@@ -1,7 +1,8 @@
 # Build as jupyterhub/systemuser
 # Run with the DockerSpawner in JupyterHub
 
-FROM jupyterhub/singleuser
+ARG JUPYTERHUB_VERSION
+FROM jupyterhub/singleuser:${JUPYTERHUB_VERSION}
 
 MAINTAINER Project Jupyter <jupyter@googlegroups.com>
 
